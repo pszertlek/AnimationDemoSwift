@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F46B60CF1BCE3DD00019C864 /* AnimatedCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60CE1BCE3DD00019C864 /* AnimatedCircleViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F46B60D21BCE3F320019C864 /* CircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60D11BCE3F320019C864 /* CircleLayer.swift */; settings = {ASSET_TAGS = (); }; };
+		F46B60D41BCE3F450019C864 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60D31BCE3F450019C864 /* CircleView.swift */; settings = {ASSET_TAGS = (); }; };
 		F4E2DDFE1BCE323A00E8F357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDFD1BCE323A00E8F357 /* AppDelegate.swift */; };
 		F4E2DE001BCE323A00E8F357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDFF1BCE323A00E8F357 /* ViewController.swift */; };
 		F4E2DE031BCE323A00E8F357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E2DE011BCE323A00E8F357 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F46B60CE1BCE3DD00019C864 /* AnimatedCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedCircleViewController.swift; sourceTree = "<group>"; };
+		F46B60D11BCE3F320019C864 /* CircleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayer.swift; sourceTree = "<group>"; };
+		F46B60D31BCE3F450019C864 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		F4E2DDFA1BCE323A00E8F357 /* AnimationDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E2DDFD1BCE323A00E8F357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4E2DDFF1BCE323A00E8F357 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F46B60D01BCE3F0D0019C864 /* AnimatedCircle */ = {
+			isa = PBXGroup;
+			children = (
+				F46B60CE1BCE3DD00019C864 /* AnimatedCircleViewController.swift */,
+				F46B60D11BCE3F320019C864 /* CircleLayer.swift */,
+				F46B60D31BCE3F450019C864 /* CircleView.swift */,
+			);
+			name = AnimatedCircle;
+			sourceTree = "<group>";
+		};
 		F4E2DDF11BCE323A00E8F357 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +72,7 @@
 			children = (
 				F4E2DDFD1BCE323A00E8F357 /* AppDelegate.swift */,
 				F4E2DDFF1BCE323A00E8F357 /* ViewController.swift */,
+				F46B60D01BCE3F0D0019C864 /* AnimatedCircle */,
 				F4E2DE011BCE323A00E8F357 /* Main.storyboard */,
 				F4E2DE041BCE323A00E8F357 /* Assets.xcassets */,
 				F4E2DE061BCE323A00E8F357 /* LaunchScreen.storyboard */,
@@ -135,7 +152,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E2DE001BCE323A00E8F357 /* ViewController.swift in Sources */,
+				F46B60D41BCE3F450019C864 /* CircleView.swift in Sources */,
+				F46B60CF1BCE3DD00019C864 /* AnimatedCircleViewController.swift in Sources */,
 				F4E2DDFE1BCE323A00E8F357 /* AppDelegate.swift in Sources */,
+				F46B60D21BCE3F320019C864 /* CircleLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +305,7 @@
 				F4E2DE0E1BCE323A00E8F357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
