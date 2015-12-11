@@ -17,33 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let label = "the width is"
-        let width = 94
-        let widthLabel = label + String(width)
-        print(widthLabel)
-        
-        let apple = 3
-        let oranges = 5
-        let appleSummary = "I have \(apple) apples."
-        let fruitSummary = "I have \(apple + oranges) pieces of fruit"
-        print(appleSummary,fruitSummary)
-        
-        
-        var shoppingList = ["catfish","water","tulips","blue paint"]
-        var occupations = [String:String]()
-//        occupations["pan"] = ["ass"]
-        
-        var 空数组 = [String]()
-        let 空字典 = [String:Float]()
-        
-        var optionalString: String? = "Hello"
-        print(optionalString == nil)
-        var optionalName: String?
-        var greeting = "Hello"
-        if let name = optionalName{
-            greeting = "hello,\(name)"
-        }
-        print(greeting)
         return true
     }
 

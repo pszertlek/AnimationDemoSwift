@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F46B60CF1BCE3DD00019C864 /* AnimatedCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60CE1BCE3DD00019C864 /* AnimatedCircleViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F46B60D21BCE3F320019C864 /* CircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60D11BCE3F320019C864 /* CircleLayer.swift */; settings = {ASSET_TAGS = (); }; };
-		F46B60D41BCE3F450019C864 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60D31BCE3F450019C864 /* CircleView.swift */; settings = {ASSET_TAGS = (); }; };
+		F41B4A0B1C1520EE00EB6B50 /* PingInvertTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41B4A0A1C1520EE00EB6B50 /* PingInvertTransition.swift */; };
+		F4280D9F1C1A639C00B66E05 /* PanTransion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4280D9E1C1A639C00B66E05 /* PanTransion.swift */; };
+		F4280DA11C1A682C00B66E05 /* AMWaveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4280DA01C1A682C00B66E05 /* AMWaveTransition.swift */; };
+		F43D53361C1048D400DF27EA /* TransitionFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43D53351C1048D400DF27EA /* TransitionFirstViewController.swift */; };
+		F43D53381C1048E000DF27EA /* TransitionSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43D53371C1048E000DF27EA /* TransitionSectionViewController.swift */; };
+		F43D533A1C1048F300DF27EA /* PingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43D53391C1048F300DF27EA /* PingTransition.swift */; };
+		F45DFFFD1C1671210081612A /* JumpStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFFFC1C1671210081612A /* JumpStarViewController.swift */; };
+		F45DFFFF1C16715C0081612A /* JumpStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFFFE1C16715C0081612A /* JumpStarView.swift */; };
+		F46B60CF1BCE3DD00019C864 /* AnimatedCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60CE1BCE3DD00019C864 /* AnimatedCircleViewController.swift */; };
+		F46B60D21BCE3F320019C864 /* CircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60D11BCE3F320019C864 /* CircleLayer.swift */; };
+		F46B60D41BCE3F450019C864 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60D31BCE3F450019C864 /* CircleView.swift */; };
+		F4E18DD41BD52A9200A4692B /* TSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E18DD31BD52A9200A4692B /* TSButton.swift */; };
 		F4E2DDFE1BCE323A00E8F357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDFD1BCE323A00E8F357 /* AppDelegate.swift */; };
 		F4E2DE001BCE323A00E8F357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDFF1BCE323A00E8F357 /* ViewController.swift */; };
 		F4E2DE031BCE323A00E8F357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E2DE011BCE323A00E8F357 /* Main.storyboard */; };
@@ -18,9 +27,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F41B4A0A1C1520EE00EB6B50 /* PingInvertTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingInvertTransition.swift; sourceTree = "<group>"; };
+		F4280D9E1C1A639C00B66E05 /* PanTransion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanTransion.swift; sourceTree = "<group>"; };
+		F4280DA01C1A682C00B66E05 /* AMWaveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMWaveTransition.swift; sourceTree = "<group>"; };
+		F43D53351C1048D400DF27EA /* TransitionFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionFirstViewController.swift; sourceTree = "<group>"; };
+		F43D53371C1048E000DF27EA /* TransitionSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionSectionViewController.swift; sourceTree = "<group>"; };
+		F43D53391C1048F300DF27EA /* PingTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingTransition.swift; sourceTree = "<group>"; };
+		F45DFFFC1C1671210081612A /* JumpStarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpStarViewController.swift; sourceTree = "<group>"; };
+		F45DFFFE1C16715C0081612A /* JumpStarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpStarView.swift; sourceTree = "<group>"; };
 		F46B60CE1BCE3DD00019C864 /* AnimatedCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedCircleViewController.swift; sourceTree = "<group>"; };
 		F46B60D11BCE3F320019C864 /* CircleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayer.swift; sourceTree = "<group>"; };
 		F46B60D31BCE3F450019C864 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		F4E18DD31BD52A9200A4692B /* TSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSButton.swift; sourceTree = "<group>"; };
 		F4E2DDFA1BCE323A00E8F357 /* AnimationDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E2DDFD1BCE323A00E8F357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4E2DDFF1BCE323A00E8F357 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +59,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F43D53341C1048B000DF27EA /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				F43D53351C1048D400DF27EA /* TransitionFirstViewController.swift */,
+				F43D53371C1048E000DF27EA /* TransitionSectionViewController.swift */,
+				F43D53391C1048F300DF27EA /* PingTransition.swift */,
+				F41B4A0A1C1520EE00EB6B50 /* PingInvertTransition.swift */,
+				F4280D9E1C1A639C00B66E05 /* PanTransion.swift */,
+				F4280DA01C1A682C00B66E05 /* AMWaveTransition.swift */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
+		F45DFFFB1C1670F20081612A /* JumpStarView */ = {
+			isa = PBXGroup;
+			children = (
+				F45DFFFC1C1671210081612A /* JumpStarViewController.swift */,
+				F45DFFFE1C16715C0081612A /* JumpStarView.swift */,
+			);
+			name = JumpStarView;
+			sourceTree = "<group>";
+		};
 		F46B60D01BCE3F0D0019C864 /* AnimatedCircle */ = {
 			isa = PBXGroup;
 			children = (
@@ -49,6 +89,14 @@
 				F46B60D31BCE3F450019C864 /* CircleView.swift */,
 			);
 			name = AnimatedCircle;
+			sourceTree = "<group>";
+		};
+		F4E18DD21BD52A5100A4692B /* AnimatedMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F4E18DD31BD52A9200A4692B /* TSButton.swift */,
+			);
+			name = AnimatedMenu;
 			sourceTree = "<group>";
 		};
 		F4E2DDF11BCE323A00E8F357 = {
@@ -70,8 +118,11 @@
 		F4E2DDFC1BCE323A00E8F357 /* AnimationDemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				F45DFFFB1C1670F20081612A /* JumpStarView */,
+				F43D53341C1048B000DF27EA /* Transition */,
 				F4E2DDFD1BCE323A00E8F357 /* AppDelegate.swift */,
 				F4E2DDFF1BCE323A00E8F357 /* ViewController.swift */,
+				F4E18DD21BD52A5100A4692B /* AnimatedMenu */,
 				F46B60D01BCE3F0D0019C864 /* AnimatedCircle */,
 				F4E2DE011BCE323A00E8F357 /* Main.storyboard */,
 				F4E2DE041BCE323A00E8F357 /* Assets.xcassets */,
@@ -151,11 +202,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45DFFFD1C1671210081612A /* JumpStarViewController.swift in Sources */,
 				F4E2DE001BCE323A00E8F357 /* ViewController.swift in Sources */,
+				F43D533A1C1048F300DF27EA /* PingTransition.swift in Sources */,
 				F46B60D41BCE3F450019C864 /* CircleView.swift in Sources */,
+				F4E18DD41BD52A9200A4692B /* TSButton.swift in Sources */,
 				F46B60CF1BCE3DD00019C864 /* AnimatedCircleViewController.swift in Sources */,
+				F43D53361C1048D400DF27EA /* TransitionFirstViewController.swift in Sources */,
+				F41B4A0B1C1520EE00EB6B50 /* PingInvertTransition.swift in Sources */,
 				F4E2DDFE1BCE323A00E8F357 /* AppDelegate.swift in Sources */,
 				F46B60D21BCE3F320019C864 /* CircleLayer.swift in Sources */,
+				F45DFFFF1C16715C0081612A /* JumpStarView.swift in Sources */,
+				F4280DA11C1A682C00B66E05 /* AMWaveTransition.swift in Sources */,
+				F43D53381C1048E000DF27EA /* TransitionSectionViewController.swift in Sources */,
+				F4280D9F1C1A639C00B66E05 /* PanTransion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AnimationDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pszertlek.AnimationDemoSwift;
@@ -279,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = AnimationDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pszertlek.AnimationDemoSwift;

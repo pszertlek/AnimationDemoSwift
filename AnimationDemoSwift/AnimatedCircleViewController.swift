@@ -25,7 +25,7 @@ class AnimatedCircleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.interactivePopGestureRecognizer?.enabled = true
         cv = CircleView(frame: CGRectMake(self.view.frame.size.width - CGFloat(160),self.view.frame.size.height / 2 - CGFloat(160),320,320))
         self.view .addSubview(cv!)
         cv!.circleLayer.progress = mySlider.value
@@ -39,7 +39,12 @@ class AnimatedCircleViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.interactivePopGestureRecognizer?.enabled = true
+        
+    }
+
 
     /*
     // MARK: - Navigation
