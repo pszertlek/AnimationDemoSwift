@@ -7,45 +7,50 @@
 //
 
 import UIKit
+
+enum MovingPoint {
+    case POINT_D
+    case POINT_B
+}
+
+let outsideRectSize :CGFloat = 90
 class CircleLayer: CALayer {
 
-    let outsideRectSize :Int32 = 90
-    var outsideRect:CGRect
-    var lastProgress:Float
-    var movePoint:Int32
-    var _progress:Float = 0.5
-    var progress:Float{
-        set(newValue){
-            _progress = newValue
-                if progress <= 0.5{
-                    movePoint = 0
-                }
-                else{
-                    movePoint = 1
-                }
-                lastProgress = progress
-            lastProgress = progress
-            let x = self.position.x - CGFloat(outsideRectSize)/2 + CGFloat(_progress - 0.5) * (self.frame.size.width - CGFloat(outsideRectSize))
-            let origin_y = self.position.y - CGFloat(outsideRectSize/2);
+    private var outsideRect:CGRect!
+    private var lastProgress:CGFloat = 0.5
+    private var movePoint:MovingPoint!
+    var progress: CGFloat = 0.0{
+        didSet{
+            if progress <= 0.5 {
+                movePoint = .POINT_B
+            }
+            else {
+                movePoint = .POINT_D
+            }
+            self.lastProgress = progress
+            let buff = (progress - 0.5) * (frame.size.width - outsideRectSize)
+            let originX = position.x - outsideRectSize / 2 + buff
+            let originY = position.y - outsideRectSize / 2
+            outsideRect = CGRectMake(originX, originY, outsideRectSize, outsideRectSize)
+            setNeedsDisplay()
             
-            self.outsideRect = CGRectMake(x, origin_y, CGFloat(outsideRectSize), CGFloat(outsideRectSize));
-            
-        self.setNeedsDisplay()
-
-        }
-        get{
-           return _progress
         }
     }
 
     
     
-    override init(){
-        outsideRect = CGRectZero
-        lastProgress = 0
-        movePoint = 0
+
+    override init() {
         super.init()
-        progress = 0.5
+    }
+    
+    override init(layer: AnyObject) {
+        super.init(layer: layer)
+        if let layer = layer as? CircleLayer {
+            progress = layer.progress
+            outsideRect = layer.outsideRect
+            lastProgress = layer.lastProgress
+        }
     }
     
     override func drawInContext(ctx: CGContext) {
@@ -53,20 +58,20 @@ class CircleLayer: CALayer {
         let moveDistance = CGFloat(outsideRect.size.width) * 1.0/6.0 * CGFloat(fabs(self.progress - 0.5)*2)
         let rectCenter = CGPoint(x: self.outsideRect.origin.x + self.outsideRect.size.width / 2, y: self.outsideRect.origin.y + self.outsideRect.size.height / 2)
         let pointA = CGPoint(x: rectCenter.x, y: self.outsideRect.origin.y + CGFloat(moveDistance))
-        let pointB = CGPoint(x: movePoint == 0 ? rectCenter.x + self.outsideRect.size.width / 2:rectCenter.x+self.outsideRect.size.height/2 - CGFloat(moveDistance), y: rectCenter.y)
+        let pointB = CGPoint(x: movePoint == .POINT_B ? rectCenter.x + self.outsideRect.size.width / 2:rectCenter.x+self.outsideRect.size.height/2 - CGFloat(moveDistance), y: rectCenter.y)
         let pointC = CGPoint(x: rectCenter.x, y:rectCenter.y + self.outsideRect.size.height/2 - CGFloat(moveDistance))
-        let pointD = CGPointMake(self.movePoint == 0 ? self.outsideRect.origin.x - CGFloat(moveDistance)*2 : self.outsideRect.origin.x, rectCenter.y);
+        let pointD = CGPointMake(self.movePoint == .POINT_B ? self.outsideRect.origin.x - CGFloat(moveDistance)*2 : self.outsideRect.origin.x, rectCenter.y);
         
         let c1 = CGPointMake(pointA.x + offset, pointA.y);
-        let c2 = CGPointMake(pointB.x, self.movePoint == 0 ? pointB.y - offset : pointB.y - offset + moveDistance);
+        let c2 = CGPointMake(pointB.x, self.movePoint == .POINT_B ? pointB.y - offset : pointB.y - offset + moveDistance);
         
-        let c3 = CGPointMake(pointB.x, self.movePoint == 0 ? pointB.y + offset : pointB.y + offset - moveDistance);
+        let c3 = CGPointMake(pointB.x, self.movePoint == .POINT_B ? pointB.y + offset : pointB.y + offset - moveDistance);
         let c4 = CGPointMake(pointC.x + offset, pointC.y);
         
         let c5 = CGPointMake(pointC.x - offset, pointC.y);
-        let c6 = CGPointMake(pointD.x, self.movePoint == 0 ? pointD.y + offset - moveDistance : pointD.y + offset);
+        let c6 = CGPointMake(pointD.x, self.movePoint == .POINT_B ? pointD.y + offset - moveDistance : pointD.y + offset);
         
-        let c7 = CGPointMake(pointD.x, self.movePoint == 0 ? pointD.y - offset + moveDistance : pointD.y - offset);
+        let c7 = CGPointMake(pointD.x, self.movePoint == .POINT_B ? pointD.y - offset + moveDistance : pointD.y - offset);
         let c8 = CGPointMake(pointA.x - offset, pointA.y);
         let rectPath = UIBezierPath(rect: outsideRect)
         

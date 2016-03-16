@@ -10,7 +10,7 @@ import UIKit
 
 class CircleView: UIView {
 
-    internal var circleLayer :CircleLayer
+    var circleLayer :CircleLayer
     
     override init(frame: CGRect) {
         circleLayer = CircleLayer()

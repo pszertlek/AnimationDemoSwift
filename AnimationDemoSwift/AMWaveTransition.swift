@@ -73,12 +73,12 @@ class AMWaveTransition: NSObject {
     
 }
 
-
+/*
 extension AMWaveTransition:UIViewControllerAnimatedTransitioning {
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return duration + maxDelay
     }
-    
+    /*
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         var fromVC: UIViewController
         var toVC: UIViewController
@@ -86,7 +86,7 @@ extension AMWaveTransition:UIViewControllerAnimatedTransitioning {
             fromVC = vc.visibleViewController!
         }
         else {
-            fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+//            fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
         }
         
         if let vc = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as? UINavigationController {
@@ -99,10 +99,40 @@ extension AMWaveTransition:UIViewControllerAnimatedTransitioning {
         
         var delta: CGFloat = 0.0
         switch self.operation {
-            case .Push
-            delta = screenWidth
+        case .Push:
+            delta = screenWidth + self.viewControllersInset
+        default:
+            delta = -screenWidth - self.viewControllersInset
+            
         }
-    }
+        
+        toVC.view.frame = transitionContext.finalFrameForViewController(toVC)
+        toVC.view.transform = CGAffineTransformMakeTranslation(delta, 0)
+        transitionContext.containerView()?.backgroundColor = fromVC.view.backgroundColor
+        transitionContext.containerView()?.layoutIfNeeded()
+        if self.operation == .Push {
+            toVC.view.transform = CGAffineTransformMakeTranslation(1, 0)
+            UIView.animateWithDuration(self.duration + self.maxDelay, delay: 0, options:UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                toVC.view.transform = CGAffineTransformIdentity
+                }, completion: {(finished :Bool) -> Void in
+                    transitionContext.completeTransition(true)
+            })
+        }
+        else {
+            fromVC.view.transform = CGAffineTransformMakeTranslation(1, 0)
+            toVC.view.transform = CGAffineTransformIdentity
+            UIView.animateWithDuration(self.duration + self.maxDelay, delay: 0, options:UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                fromVC.view.transform = CGAffineTransformMakeTranslation(1, 0)
+                }, completion: {(finished :Bool) -> Void in
+
+                    fromVC.view.removeFromSuperview()
+                    transitionContext.completeTransition(true)
+            })
+        }
+        let fromViews = self.visibleCellsForViewController(fromVC)
+        let toViews = self.visibleCellsForViewController(toVC)
+        
+    }*/
     
     func visibleCellsForViewController(viewController: UIViewController) -> [UIView]? {
 
@@ -170,4 +200,4 @@ extension UITableView {
         
         return views
     }
-}
+}*/

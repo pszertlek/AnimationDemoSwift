@@ -28,12 +28,12 @@ class AnimatedCircleViewController: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.enabled = true
         cv = CircleView(frame: CGRectMake(self.view.frame.size.width - CGFloat(160),self.view.frame.size.height / 2 - CGFloat(160),320,320))
         self.view .addSubview(cv!)
-        cv!.circleLayer.progress = mySlider.value
+        cv!.circleLayer.progress = CGFloat(mySlider.value)
         // Do any additional setup after loading the view.
     }
 
     @IBAction func sliderChange(sender: UISlider) {
-        cv!.circleLayer.progress = mySlider.value
+        cv!.circleLayer.progress = CGFloat(mySlider.value)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
