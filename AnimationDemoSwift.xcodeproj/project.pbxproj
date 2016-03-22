@@ -13,14 +13,18 @@
 		F43D53361C1048D400DF27EA /* TransitionFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43D53351C1048D400DF27EA /* TransitionFirstViewController.swift */; };
 		F43D53381C1048E000DF27EA /* TransitionSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43D53371C1048E000DF27EA /* TransitionSectionViewController.swift */; };
 		F43D533A1C1048F300DF27EA /* PingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43D53391C1048F300DF27EA /* PingTransition.swift */; };
+		F453DE251C99549300322B6D /* FireworksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453DE241C99549300322B6D /* FireworksView.swift */; };
+		F453DE271C995DDB00322B6D /* FireworkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453DE261C995DDB00322B6D /* FireworkButton.swift */; };
 		F45D1E3F1C7B04CE003298F2 /* DynamicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D1E3E1C7B04CE003298F2 /* DynamicsViewController.swift */; };
 		F45DFFFD1C1671210081612A /* JumpStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFFFC1C1671210081612A /* JumpStarViewController.swift */; };
 		F45DFFFF1C16715C0081612A /* JumpStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFFFE1C16715C0081612A /* JumpStarView.swift */; };
+		F468A7511C9AA418005335DD /* DownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F468A7501C9AA418005335DD /* DownloadButton.swift */; };
 		F46B60CF1BCE3DD00019C864 /* AnimatedCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60CE1BCE3DD00019C864 /* AnimatedCircleViewController.swift */; };
 		F46B60D21BCE3F320019C864 /* CircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60D11BCE3F320019C864 /* CircleLayer.swift */; };
 		F46B60D41BCE3F450019C864 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B60D31BCE3F450019C864 /* CircleView.swift */; };
 		F46CBE621C27D2D900D9B6C7 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46CBE611C27D2D800D9B6C7 /* CGRectEx.swift */; };
 		F46CBE641C27D59200D9B6C7 /* NSTimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46CBE631C27D59200D9B6C7 /* NSTimerEx.swift */; };
+		F482EAFB1C9B9BB50048A721 /* CuteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F482EAFA1C9B9BB50048A721 /* CuteView.swift */; };
 		F4E18DD41BD52A9200A4692B /* TSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E18DD31BD52A9200A4692B /* TSButton.swift */; };
 		F4E2DDFE1BCE323A00E8F357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDFD1BCE323A00E8F357 /* AppDelegate.swift */; };
 		F4E2DE001BCE323A00E8F357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDFF1BCE323A00E8F357 /* ViewController.swift */; };
@@ -36,14 +40,18 @@
 		F43D53351C1048D400DF27EA /* TransitionFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionFirstViewController.swift; sourceTree = "<group>"; };
 		F43D53371C1048E000DF27EA /* TransitionSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionSectionViewController.swift; sourceTree = "<group>"; };
 		F43D53391C1048F300DF27EA /* PingTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingTransition.swift; sourceTree = "<group>"; };
+		F453DE241C99549300322B6D /* FireworksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireworksView.swift; sourceTree = "<group>"; };
+		F453DE261C995DDB00322B6D /* FireworkButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireworkButton.swift; sourceTree = "<group>"; };
 		F45D1E3E1C7B04CE003298F2 /* DynamicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicsViewController.swift; sourceTree = "<group>"; };
 		F45DFFFC1C1671210081612A /* JumpStarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpStarViewController.swift; sourceTree = "<group>"; };
 		F45DFFFE1C16715C0081612A /* JumpStarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpStarView.swift; sourceTree = "<group>"; };
+		F468A7501C9AA418005335DD /* DownloadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadButton.swift; sourceTree = "<group>"; };
 		F46B60CE1BCE3DD00019C864 /* AnimatedCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedCircleViewController.swift; sourceTree = "<group>"; };
 		F46B60D11BCE3F320019C864 /* CircleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayer.swift; sourceTree = "<group>"; };
 		F46B60D31BCE3F450019C864 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		F46CBE611C27D2D800D9B6C7 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
 		F46CBE631C27D59200D9B6C7 /* NSTimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerEx.swift; sourceTree = "<group>"; };
+		F482EAFA1C9B9BB50048A721 /* CuteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuteView.swift; sourceTree = "<group>"; };
 		F4E18DD31BD52A9200A4692B /* TSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSButton.swift; sourceTree = "<group>"; };
 		F4E2DDFA1BCE323A00E8F357 /* AnimationDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E2DDFD1BCE323A00E8F357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +86,15 @@
 			name = Transition;
 			sourceTree = "<group>";
 		};
+		F453DE231C99547200322B6D /* FireworksButton */ = {
+			isa = PBXGroup;
+			children = (
+				F453DE241C99549300322B6D /* FireworksView.swift */,
+				F453DE261C995DDB00322B6D /* FireworkButton.swift */,
+			);
+			name = FireworksButton;
+			sourceTree = "<group>";
+		};
 		F45D1E3D1C7B049B003298F2 /* UIDynamicsDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +112,14 @@
 			name = JumpStarView;
 			sourceTree = "<group>";
 		};
+		F468A74D1C9AA3DB005335DD /* DownloadButton */ = {
+			isa = PBXGroup;
+			children = (
+				F468A7501C9AA418005335DD /* DownloadButton.swift */,
+			);
+			name = DownloadButton;
+			sourceTree = "<group>";
+		};
 		F46B60D01BCE3F0D0019C864 /* AnimatedCircle */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +128,14 @@
 				F46B60D31BCE3F450019C864 /* CircleView.swift */,
 			);
 			name = AnimatedCircle;
+			sourceTree = "<group>";
+		};
+		F482EAF91C9B9BA60048A721 /* cuteView */ = {
+			isa = PBXGroup;
+			children = (
+				F482EAFA1C9B9BB50048A721 /* CuteView.swift */,
+			);
+			name = cuteView;
 			sourceTree = "<group>";
 		};
 		F4E18DD21BD52A5100A4692B /* AnimatedMenu */ = {
@@ -132,6 +165,9 @@
 		F4E2DDFC1BCE323A00E8F357 /* AnimationDemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				F482EAF91C9B9BA60048A721 /* cuteView */,
+				F468A74D1C9AA3DB005335DD /* DownloadButton */,
+				F453DE231C99547200322B6D /* FireworksButton */,
 				F45D1E3D1C7B049B003298F2 /* UIDynamicsDemo */,
 				F45DFFFB1C1670F20081612A /* JumpStarView */,
 				F43D53341C1048B000DF27EA /* Transition */,
@@ -220,8 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F45DFFFD1C1671210081612A /* JumpStarViewController.swift in Sources */,
+				F453DE271C995DDB00322B6D /* FireworkButton.swift in Sources */,
 				F46CBE621C27D2D900D9B6C7 /* CGRectEx.swift in Sources */,
 				F4E2DE001BCE323A00E8F357 /* ViewController.swift in Sources */,
+				F453DE251C99549300322B6D /* FireworksView.swift in Sources */,
 				F43D533A1C1048F300DF27EA /* PingTransition.swift in Sources */,
 				F46B60D41BCE3F450019C864 /* CircleView.swift in Sources */,
 				F4E18DD41BD52A9200A4692B /* TSButton.swift in Sources */,
@@ -229,6 +267,7 @@
 				F46B60CF1BCE3DD00019C864 /* AnimatedCircleViewController.swift in Sources */,
 				F43D53361C1048D400DF27EA /* TransitionFirstViewController.swift in Sources */,
 				F41B4A0B1C1520EE00EB6B50 /* PingInvertTransition.swift in Sources */,
+				F482EAFB1C9B9BB50048A721 /* CuteView.swift in Sources */,
 				F46CBE641C27D59200D9B6C7 /* NSTimerEx.swift in Sources */,
 				F4E2DDFE1BCE323A00E8F357 /* AppDelegate.swift in Sources */,
 				F46B60D21BCE3F320019C864 /* CircleLayer.swift in Sources */,
@@ -236,6 +275,7 @@
 				F4280DA11C1A682C00B66E05 /* AMWaveTransition.swift in Sources */,
 				F43D53381C1048E000DF27EA /* TransitionSectionViewController.swift in Sources */,
 				F4280D9F1C1A639C00B66E05 /* PanTransion.swift in Sources */,
+				F468A7511C9AA418005335DD /* DownloadButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
