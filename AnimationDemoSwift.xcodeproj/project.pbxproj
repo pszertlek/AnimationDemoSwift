@@ -25,6 +25,10 @@
 		F46CBE621C27D2D900D9B6C7 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46CBE611C27D2D800D9B6C7 /* CGRectEx.swift */; };
 		F46CBE641C27D59200D9B6C7 /* NSTimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46CBE631C27D59200D9B6C7 /* NSTimerEx.swift */; };
 		F482EAFB1C9B9BB50048A721 /* CuteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F482EAFA1C9B9BB50048A721 /* CuteView.swift */; };
+		F492A5511CA0E5F800AF27A0 /* DynamicCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492A5501CA0E5F800AF27A0 /* DynamicCollectionViewLayout.swift */; };
+		F4AF2A6D1CA23A9D005A0DDB /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF2A6C1CA23A9D005A0DDB /* ItemViewController.swift */; };
+		F4AF2A6F1CA23B16005A0DDB /* PulseLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF2A6E1CA23B16005A0DDB /* PulseLoader.swift */; };
+		F4DC28EA1CA12DB000885E92 /* DynamicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC28E91CA12DB000885E92 /* DynamicCollectionViewController.swift */; };
 		F4E18DD41BD52A9200A4692B /* TSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E18DD31BD52A9200A4692B /* TSButton.swift */; };
 		F4E2DDFE1BCE323A00E8F357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDFD1BCE323A00E8F357 /* AppDelegate.swift */; };
 		F4E2DE001BCE323A00E8F357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2DDFF1BCE323A00E8F357 /* ViewController.swift */; };
@@ -52,6 +56,10 @@
 		F46CBE611C27D2D800D9B6C7 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
 		F46CBE631C27D59200D9B6C7 /* NSTimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerEx.swift; sourceTree = "<group>"; };
 		F482EAFA1C9B9BB50048A721 /* CuteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuteView.swift; sourceTree = "<group>"; };
+		F492A5501CA0E5F800AF27A0 /* DynamicCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCollectionViewLayout.swift; sourceTree = "<group>"; };
+		F4AF2A6C1CA23A9D005A0DDB /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		F4AF2A6E1CA23B16005A0DDB /* PulseLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseLoader.swift; sourceTree = "<group>"; };
+		F4DC28E91CA12DB000885E92 /* DynamicCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCollectionViewController.swift; sourceTree = "<group>"; };
 		F4E18DD31BD52A9200A4692B /* TSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSButton.swift; sourceTree = "<group>"; };
 		F4E2DDFA1BCE323A00E8F357 /* AnimationDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E2DDFD1BCE323A00E8F357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				F45D1E3E1C7B04CE003298F2 /* DynamicsViewController.swift */,
+				F492A5501CA0E5F800AF27A0 /* DynamicCollectionViewLayout.swift */,
+				F4DC28E91CA12DB000885E92 /* DynamicCollectionViewController.swift */,
 			);
 			name = UIDynamicsDemo;
 			sourceTree = "<group>";
@@ -181,6 +191,8 @@
 				F4E2DE091BCE323A00E8F357 /* Info.plist */,
 				F46CBE611C27D2D800D9B6C7 /* CGRectEx.swift */,
 				F46CBE631C27D59200D9B6C7 /* NSTimerEx.swift */,
+				F4AF2A6C1CA23A9D005A0DDB /* ItemViewController.swift */,
+				F4AF2A6E1CA23B16005A0DDB /* PulseLoader.swift */,
 			);
 			path = AnimationDemoSwift;
 			sourceTree = "<group>";
@@ -263,6 +275,7 @@
 				F43D533A1C1048F300DF27EA /* PingTransition.swift in Sources */,
 				F46B60D41BCE3F450019C864 /* CircleView.swift in Sources */,
 				F4E18DD41BD52A9200A4692B /* TSButton.swift in Sources */,
+				F492A5511CA0E5F800AF27A0 /* DynamicCollectionViewLayout.swift in Sources */,
 				F45D1E3F1C7B04CE003298F2 /* DynamicsViewController.swift in Sources */,
 				F46B60CF1BCE3DD00019C864 /* AnimatedCircleViewController.swift in Sources */,
 				F43D53361C1048D400DF27EA /* TransitionFirstViewController.swift in Sources */,
@@ -271,7 +284,10 @@
 				F46CBE641C27D59200D9B6C7 /* NSTimerEx.swift in Sources */,
 				F4E2DDFE1BCE323A00E8F357 /* AppDelegate.swift in Sources */,
 				F46B60D21BCE3F320019C864 /* CircleLayer.swift in Sources */,
+				F4AF2A6D1CA23A9D005A0DDB /* ItemViewController.swift in Sources */,
 				F45DFFFF1C16715C0081612A /* JumpStarView.swift in Sources */,
+				F4AF2A6F1CA23B16005A0DDB /* PulseLoader.swift in Sources */,
+				F4DC28EA1CA12DB000885E92 /* DynamicCollectionViewController.swift in Sources */,
 				F4280DA11C1A682C00B66E05 /* AMWaveTransition.swift in Sources */,
 				F43D53381C1048E000DF27EA /* TransitionSectionViewController.swift in Sources */,
 				F4280D9F1C1A639C00B66E05 /* PanTransion.swift in Sources */,

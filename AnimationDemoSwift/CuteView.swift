@@ -41,7 +41,7 @@ class CuteView: UIView {
     private var x2: CGFloat = 0.0
     private var y2: CGFloat = 0.0
     private var centerDistance: CGFloat = 0.0
-    private var conDigree: CGFloat = 0.0
+    private var cosDigree: CGFloat = 0.0
     private var sinDigree: CGFloat = 0.0
 
     private var pointA = CGPointZero

@@ -63,6 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     navigationController.view.transform = CGAffineTransformIdentity
                     }, completion: { (finished) -> Void in
                         navigationController.view.layer.mask = nil
+                        self.window?.backgroundColor = UIColor.whiteColor()
                 })
         }
         
