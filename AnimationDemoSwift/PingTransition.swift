@@ -9,14 +9,18 @@
 import UIKit
 
 class PingTransition : NSObject ,UIViewControllerAnimatedTransitioning {
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        
+    }
+    
     
     var transitionContext : UIViewControllerContextTransitioning?
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        let interval :NSTimeInterval = 0.7
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        let interval :TimeInterval = 0.7
         return interval
     }
-    
+    /*
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
         let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! TransitionFirstViewController
@@ -73,6 +77,6 @@ class PingTransition : NSObject ,UIViewControllerAnimatedTransitioning {
         transitionContext?.viewControllerForKey(UITransitionContextToViewControllerKey)!.view.layer.mask = nil
 
     }
-    
+    */
     
 }

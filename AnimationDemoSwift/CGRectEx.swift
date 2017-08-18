@@ -14,7 +14,7 @@ extension CGRect {
             return self.origin.x
         }
         set {
-            self = CGRectMake(newValue,self.y,self.width,self.height)
+            self = CGRect(x: newValue, y: self.y, width: self.width, height: self.height)
         }
     }
     var y: CGFloat {
@@ -22,7 +22,7 @@ extension CGRect {
             return self.origin.y
         }
         set {
-            self = CGRectMake(x, newValue, width, height)
+            self = CGRect(x:self.x,y:newValue,width:self.width,height:self.height)
         }
     }
     var width: CGFloat {
@@ -30,7 +30,7 @@ extension CGRect {
             return self.size.width
         }
         set {
-            self = CGRectMake(x, y, newValue, height)
+            self = CGRect(x:self.x,y:self.y,width:newValue,height:self.height)
         }
     }
     var height: CGFloat {
@@ -38,7 +38,7 @@ extension CGRect {
             return self.size.height
         }
         set {
-            self = CGRectMake(x, y, width, newValue)
+            self = CGRect(x:self.x,y:self.y,width:self.width,height:newValue)
         }
     }
     var top: CGFloat {

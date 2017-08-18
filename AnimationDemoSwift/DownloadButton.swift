@@ -12,7 +12,7 @@ let kRadiusShrinkAnim = "cornerRadiusShrinkAnim"
 let kRadiusExpandAnim = "radiusExpandAnimation"
 let kProgressBarAnimation = "progressBarAnimation"
 let kCheckAnimation = "checkAnimation"
-
+/*
 class DownloadButton: UIView {
 
     /*
@@ -25,7 +25,7 @@ class DownloadButton: UIView {
     
     var progressBarHeight: CGFloat = 0.0
     var progressBarWidth: CGFloat = 0.0
-    var originFrame = CGRectZero
+    var originFrame = CGRect()
     var animating = false
     
     override init(frame: CGRect) {
@@ -93,7 +93,7 @@ class DownloadButton: UIView {
         path.addLineToPoint(CGPoint(x: rectInCircle.origin.x + rectInCircle.size.width/3,y: rectInCircle.origin.y + rectInCircle.size.height*9/10))
         path.addLineToPoint(CGPoint(x: rectInCircle.origin.x + rectInCircle.size.width*8/10, y: rectInCircle.origin.y + rectInCircle.size.height*2/10))
         
-        checkLayer.path = path.CGPath
+        checkLayer.path = path.cgPath
         checkLayer.fillColor = UIColor.clearColor().CGColor
         checkLayer.strokeColor = UIColor.whiteColor().CGColor
         checkLayer.lineWidth = 10.0
@@ -139,4 +139,4 @@ class DownloadButton: UIView {
         }
     
     }
-}
+}*/

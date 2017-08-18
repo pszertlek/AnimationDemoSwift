@@ -12,42 +12,42 @@ class PingInvertTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
     var ctx: UIViewControllerContextTransitioning!
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.7
     }
     
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         ctx = transitionContext
-        let container = ctx.containerView()
-        let fromVC = ctx.viewControllerForKey(UITransitionContextFromViewControllerKey)! as UIViewController
-        let toVC = ctx.viewControllerForKey(UITransitionContextToViewControllerKey)! as UIViewController
-        container?.addSubview(fromVC.view)
-        container?.addSubview(toVC.view)
+        let container = ctx.containerView
+        let fromVC = ctx.viewController(forKey: UITransitionContextViewControllerKey.from)! as UIViewController
+        let toVC = ctx.viewController(forKey: UITransitionContextViewControllerKey.to)! as UIViewController
+        container.addSubview(fromVC.view)
+        container.addSubview(toVC.view)
 
-        let startPath = UIBezierPath(ovalInRect: CGRectMake(20, 20, 50, 50))
+        let startPath = UIBezierPath(ovalIn: CGRect(x:20,y: 20,width: 50,height: 50))
         let radius = fromVC.view.frame.height - 70
-        let endPath = UIBezierPath(ovalInRect: CGRectMake(20 - radius, 20 - radius, 2 * radius,2 * radius))
+        let endPath = UIBezierPath(ovalIn: CGRect(x:20 - radius,y: 20 - radius,width: 2 * radius,height:2 * radius))
         
         let shapeLayer = CAShapeLayer()
-        let path = UIBezierPath(ovalInRect: CGRectInset(CGRectMake(20, 20, 50, 50),0 - radius,0 - radius))
-        shapeLayer.path = path.CGPath
+        let path = UIBezierPath(ovalIn: CGRect(x:20,y: 20,width: 50,height: 50).insetBy(dx: -radius, dy: -radius))
+        shapeLayer.path = path.cgPath
         toVC.view.layer.mask = shapeLayer
         
         let animation = CABasicAnimation(keyPath: "path")
-        animation.fromValue = endPath.CGPath
-        animation.toValue = startPath.CGPath
-        animation.duration = self.transitionDuration(ctx)
-        animation.delegate = self
+        animation.fromValue = endPath.cgPath
+        animation.toValue = startPath.cgPath
+        animation.duration = self.transitionDuration(using: ctx)
+        animation.delegate = self as? CAAnimationDelegate
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         
-        shapeLayer.addAnimation(animation, forKey: "path")
+        shapeLayer.add(animation, forKey: "path")
 
     }
     
-    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+ func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         ctx.completeTransition(true)
-        let fromVC = ctx.viewControllerForKey(UITransitionContextFromViewControllerKey)! as UIViewController
-        let toVC = ctx.viewControllerForKey(UITransitionContextToViewControllerKey)! as UIViewController
+    let fromVC = ctx.viewControllerForKey(UITransitionContextViewControllerKey.from)! as UIViewControllerUITransitionContextViewControllerKey.from
+    let toVC = ctx.viewControllerForKey(UITransitionContextViewControllerKey.to)! as UIViewControllerUITransitionContextViewControllerKey.to
         fromVC.view.layer.mask = nil
         toVC.view.layer.mask = nil
     }

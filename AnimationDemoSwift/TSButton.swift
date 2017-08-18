@@ -18,11 +18,7 @@ class TSButton: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-        let ctx = UIGraphicsGetCurrentContext()
-        
+    override func draw(_ rect: CGRect) {
         
     }
 

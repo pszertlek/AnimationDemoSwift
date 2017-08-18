@@ -14,7 +14,7 @@ class FireworkButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         clipsToBounds = false
-        self.insertSubview(fireworksView, atIndex: 0)
+        self.insertSubview(fireworksView, at: 0)
     }
     
 
@@ -25,7 +25,7 @@ class FireworkButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         fireworksView.frame = self.bounds
-        self.insertSubview(fireworksView, atIndex: 0)
+        self.insertSubview(fireworksView, at: 0)
     }
     
     func animte() {

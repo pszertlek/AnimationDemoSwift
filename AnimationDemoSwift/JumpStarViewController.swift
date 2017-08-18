@@ -15,12 +15,12 @@ class JumpStarViewController: UIViewController {
     }
     @IBOutlet weak var backClick: UIButton!
     @IBAction func back(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.interactivePopGestureRecognizer?.enabled = true
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
 
         startView.layoutIfNeeded()
         startView.markImage = UIImage(named: "icon_star_incell")
@@ -28,10 +28,9 @@ class JumpStarViewController: UIViewController {
         startView.state = .nonMark
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated:Bool) {
         super.viewDidAppear(animated)
-        self.navigationController?.interactivePopGestureRecognizer?.enabled = true
-
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
 
 }

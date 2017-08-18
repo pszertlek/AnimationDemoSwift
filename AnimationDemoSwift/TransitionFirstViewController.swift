@@ -10,7 +10,7 @@ import UIKit
 
 class TransitionFirstViewController : UIViewController,UINavigationControllerDelegate {
     var button : UIButton!
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.delegate = self
     }
@@ -22,12 +22,12 @@ class TransitionFirstViewController : UIViewController,UINavigationControllerDel
         imageView.frame = self.view.bounds
         self.view.addSubview(imageView)
 
-        button = UIButton(type:.System)
-        button.frame = CGRectMake(UIScreen.mainScreen().bounds.width - 100, 0,  100, 100)
-        button.backgroundColor = UIColor.redColor()
+        button = UIButton(type:.system)
+        button.frame = CGRect(x:UIScreen.main.bounds.width - 100,y: 0,width:  100,height: 100)
+        button.backgroundColor = UIColor.red
         view.addSubview(button)
         
-        button .addTarget(self, action: Selector("btnClick"), forControlEvents: .TouchUpInside)
+        button .addTarget(self, action: Selector("btnClick"), for: .touchUpInside)
     }
     
     func btnClick() {
@@ -35,9 +35,9 @@ class TransitionFirstViewController : UIViewController,UINavigationControllerDel
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch operation {
-        case .Push :
+        case .push :
             return PingTransition()
         default:
             return nil

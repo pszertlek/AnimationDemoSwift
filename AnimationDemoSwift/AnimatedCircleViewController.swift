@@ -13,7 +13,7 @@ class AnimatedCircleViewController: UIViewController {
     @IBOutlet weak var mySlider: UISlider!
     var cv:CircleView?
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.cv = nil
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -25,8 +25,8 @@ class AnimatedCircleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.interactivePopGestureRecognizer?.enabled = true
-        cv = CircleView(frame: CGRectMake(self.view.frame.size.width - CGFloat(160),self.view.frame.size.height / 2 - CGFloat(160),320,320))
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        cv = CircleView(frame: CGRect(x:self.view.frame.size.width - CGFloat(160),y:self.view.frame.size.height / 2 - CGFloat(160),width:320,height:320))
         self.view .addSubview(cv!)
         cv!.circleLayer.progress = CGFloat(mySlider.value)
         // Do any additional setup after loading the view.
@@ -39,9 +39,9 @@ class AnimatedCircleViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.navigationController?.interactivePopGestureRecognizer?.enabled = true
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
     }
 

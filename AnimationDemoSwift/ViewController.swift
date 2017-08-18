@@ -29,15 +29,15 @@ class ViewController: UITableViewController {
         snowflake.velocity = -10
         snowflake.velocityRange = 50
         snowflake.yAcceleration = 2
-        snowflake.emissionRange = CGFloat(0.5 * M_PI)
-        snowflake.spinRange = CGFloat(0.25 * M_PI)
-        snowflake.contents = UIImage(named: "snow")?.CGImage
-        snowflake.color = UIColor(red: 0.6, green: 0.658, blue: 0.743, alpha: 1.000).CGColor
+        snowflake.emissionRange = CGFloat(0.5 * Double.pi)
+        snowflake.spinRange = CGFloat(0.25 * Double.pi)
+        snowflake.contents = UIImage(named: "snow")?.cgImage
+        snowflake.color = UIColor(red: 0.6, green: 0.658, blue: 0.743, alpha: 1.000).cgColor
         
         snowEmitter.shadowOpacity = 1.0
         snowEmitter.shadowRadius = 0.0
-        snowEmitter.shadowOffset = CGSizeMake(0.0, 1.0)
-        snowEmitter.shadowColor = UIColor.whiteColor().CGColor
+        snowEmitter.shadowOffset = CGSize(width:0.0, height: 1.0)
+        snowEmitter.shadowColor = UIColor.white.cgColor
         snowEmitter.emitterCells = [snowflake]
 
         view.layer.insertSublayer(snowEmitter, above: self.tableView.layer)
@@ -51,7 +51,7 @@ class ViewController: UITableViewController {
 
     
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 //        self.navigationController?.interactivePopGestureRecognizer?.enabled = true
         

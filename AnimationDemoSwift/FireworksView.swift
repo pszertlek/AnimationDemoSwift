@@ -20,7 +20,7 @@ class FireworksView: UIView {
     var particleImage: UIImage? {
         didSet {
             for cell in self.emitterCells {
-                cell.contents = particleImage!.CGImage
+                cell.contents = particleImage!.cgImage
             }
         }
     }
@@ -67,7 +67,7 @@ class FireworksView: UIView {
         explosionLayer = CAEmitterLayer()
         explosionLayer.emitterShape = kCAEmitterLayerCircle
         explosionLayer.name = "emitterLayer"
-        explosionLayer.emitterSize = CGSizeMake(25.0, 0)
+        explosionLayer.emitterSize = CGSize(width:25.0,height: 0)
         explosionLayer.emitterCells = [explosionCell]
         explosionLayer.renderMode = kCAEmitterLayerOldestFirst
         explosionLayer.masksToBounds = false
@@ -93,7 +93,7 @@ class FireworksView: UIView {
         chargeLayer.masksToBounds = false
         chargeLayer.seed = 10
         chargeLayer.emitterCells = [chargeCell]
-        chargeLayer.emitterSize = CGSizeMake(25.0, 0)
+        chargeLayer.emitterSize = CGSize(width:25.0,height: 0)
         self.layer.addSublayer(chargeLayer)
         
         self.emitterCells = [explosionCell,chargeCell]
@@ -103,18 +103,20 @@ class FireworksView: UIView {
     func animate() {
         chargeLayer.beginTime = CACurrentMediaTime()
         chargeLayer.setValue(80, forKeyPath: "emitterCells.charge.birthRate")
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC/10)), dispatch_get_main_queue()) { () -> Void in
-            self.exlode()
-        }
+        
+        
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC/10)), dispatch_get_main_queue()) { () -> Void in
+//            self.exlode()
+//        }
     }
     
     func exlode() {
         explosionLayer.beginTime = CACurrentMediaTime()
         chargeLayer.setValue(0, forKeyPath: "emitterCells.charge.birthRate")
         chargeLayer.setValue(500, forKeyPath: "emitterCells.charge.birthRate")
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC/10)), dispatch_get_main_queue()) { () -> Void in
-            self.stop()
-        }
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC/10)), dispatch_get_main_queue()) { () -> Void in
+//            self.stop()
+//        }
 
     }
     

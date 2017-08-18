@@ -12,7 +12,7 @@ class TransitionSecondViewController: UIViewController,UINavigationControllerDel
     var button: UIButton!
     var percentTransition: UIPercentDrivenInteractiveTransition?
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.delegate = self
     }
