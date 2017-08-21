@@ -12,7 +12,7 @@ struct BubbleOptions {
     var text: String = ""
     var bubbleWidth: CGFloat = 0.0
     var viscosity: CGFloat = 0.0
-    var bubbleColor: UIColor = UIColor.whiteColor()
+    var bubbleColor: UIColor = UIColor.white
     
 }
 
@@ -44,19 +44,19 @@ class CuteView: UIView {
     private var cosDigree: CGFloat = 0.0
     private var sinDigree: CGFloat = 0.0
 
-    private var pointA = CGPointZero
-    private var pointB = CGPointZero
-    private var pointC = CGPointZero
-    private var pointD = CGPointZero
-    private var pointO = CGPointZero
-    private var pointP = CGPointZero
+    private var pointA = CGPoint()
+    private var pointB = CGPoint()
+    private var pointC = CGPoint()
+    private var pointD = CGPoint()
+    private var pointO = CGPoint()
+    private var pointP = CGPoint()
 
-    private var initialPoint = CGPointZero
-    private var oldBackViewFrame = CGRectZero
-    private var oldBackViewCenter = CGPointZero
+    private var initialPoint = CGPoint()
+    private var oldBackViewFrame = CGRect()
+    private var oldBackViewCenter = CGPoint()
 
     init(point: CGPoint, superView: UIView, options: BubbleOptions) {
-        super.init(frame: CGRectMake(point.x, point.y, options.bubbleWidth, options.bubbleWidth))
+        super.init(frame: CGRect(x:point.x,y:point.y, width:options.bubbleWidth, height:options.bubbleWidth))
         bubbleOptions = options
         initialPoint = point
         containerView = superView
@@ -70,7 +70,7 @@ class CuteView: UIView {
     
     func setup() {
         shapeLayer = CAShapeLayer()
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clear
         frontView = UIView(frame: CGRect(x: initialPoint.x, y: initialPoint.y, width: bubbleOptions.bubbleWidth, height: bubbleOptions.bubbleWidth))
         r2 = frontView.bounds.size.width / 2.0
         frontView.layer.cornerRadius = r2
@@ -82,12 +82,12 @@ class CuteView: UIView {
         backView.backgroundColor = bubbleOptions.bubbleColor
         
         bubbleLabel = UILabel()
-        bubbleLabel.frame = CGRectMake(0, 0, frontView.bounds.width, frontView.bounds.height)
-        bubbleLabel.textColor = UIColor.whiteColor()
-        bubbleLabel.textAlignment = .Center
-        bubbleLabel.text ==  bubbleOptions.text
+        bubbleLabel.frame = CGRect(x:0, y:0, width:frontView.bounds.width, height:frontView.bounds.height)
+        bubbleLabel.textColor = UIColor.white
+        bubbleLabel.textAlignment = .center
+        bubbleLabel.text =  bubbleOptions.text
         
-        frontView.insertSubview(bubbleLabel, atIndex: 0)
+        frontView.insertSubview(bubbleLabel, at: 0)
         containerView.addSubview(backView)
         containerView.addSubview(frontView)
         
@@ -96,42 +96,42 @@ class CuteView: UIView {
         x2 = frontView.center.x
         y2 = frontView.center.y
         
-        pointA = CGPointMake(x1 - r1, y1)
-        pointB = CGPointMake(x1+r1, y1)
-        pointD = CGPointMake(x2 - r2, y2)
-        pointC = CGPointMake(x2 + r2, y2)
-        pointO = CGPointMake(x1-r1, y1)
-        pointP = CGPointMake(x2+r2, y2)
+        pointA = CGPoint(x:x1 - r1,y: y1)
+        pointB = CGPoint(x:x1+r1, y:y1)
+        pointD = CGPoint(x:x2 - r2, y:y2)
+        pointC = CGPoint(x:x2 + r2, y:y2)
+        pointO = CGPoint(x:x1-r1, y:y1)
+        pointP = CGPoint(x:x2+r2, y:y2)
         
         oldBackViewFrame = backView.frame
         oldBackViewCenter = backView.center
-        backView.hidden = true
+        backView.isHidden = true
         
         addAniamtionLikeGameCenterBubble()
         let panGesture = UIPanGestureRecognizer(target: self
-            , action: "handleDragGesture:")
+            , action: Selector(("handleDragGesture:")))
         frontView.addGestureRecognizer(panGesture)
         
         func handleDragGesture(ges: UIPanGestureRecognizer) {
-            let dragPoint = ges.locationInView(containerView)
+            let dragPoint = ges.location(in: containerView)
         
-            if ges.state == .Began {
-                backView.hidden = false
+            if ges.state == .began {
+                backView.isHidden = false
                 fillColorForCute = bubbleOptions.bubbleColor
                 removeAniamtionLikeGameCenterBubble()
-            } else if ges.state == .Changed {
+            } else if ges.state == .changed {
                 frontView?.center = dragPoint
                 if r1 <= 6 {
-                    fillColorForCute = UIColor.clearColor()
-                    backView.hidden = true
+                    fillColorForCute = UIColor.clear
+                    backView.isHidden = true
                     shapeLayer.removeFromSuperlayer()
                 }
                 drawRect()
-            } else if ges.state == .Ended || ges.state == .Cancelled || ges.state == .Failed {
-                backView.hidden = true
-                fillColorForCute = UIColor.clearColor()
+            } else if ges.state == .ended || ges.state == .cancelled || ges.state == .failed {
+                backView.isHidden = true
+                fillColorForCute = UIColor.clear
                 shapeLayer.removeFromSuperlayer()
-                UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.0, options: .CurveEaseInOut, animations: { [weak self] () -> Void in
+                UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.0, options: .curveEaseInOut, animations: { [weak self] () -> Void in
                     if let strongsSelf = self {
                         strongsSelf.frontView?.center = strongsSelf.oldBackViewCenter
                     }
@@ -165,27 +165,27 @@ class CuteView: UIView {
         
         r1 = oldBackViewFrame.size.width / 2 - centerDistance/bubbleOptions.viscosity
         
-        pointA = CGPointMake(x1-r1*cosDigree, y1+r1*sinDigree) // A
-        pointB = CGPointMake(x1+r1*cosDigree, y1-r1*sinDigree) // B
-        pointD = CGPointMake(x2-r2*cosDigree, y2+r2*sinDigree) // D
-        pointC = CGPointMake(x2+r2*cosDigree, y2-r2*sinDigree) // C
-        pointO = CGPointMake(pointA.x + (centerDistance / 2)*sinDigree, pointA.y + (centerDistance / 2)*cosDigree)
-        pointP = CGPointMake(pointB.x + (centerDistance / 2)*sinDigree, pointB.y + (centerDistance / 2)*cosDigree)
+        pointA = CGPoint(x:x1-r1*cosDigree, y:y1+r1*sinDigree) // A
+        pointB = CGPoint(x:x1+r1*cosDigree, y:y1-r1*sinDigree) // B
+        pointD = CGPoint(x:x2-r2*cosDigree, y:y2+r2*sinDigree) // D
+        pointC = CGPoint(x:x2+r2*cosDigree, y:y2-r2*sinDigree) // C
+        pointO = CGPoint(x:pointA.x + (centerDistance / 2)*sinDigree, y:pointA.y + (centerDistance / 2)*cosDigree)
+        pointP = CGPoint(x:pointB.x + (centerDistance / 2)*sinDigree, y:pointB.y + (centerDistance / 2)*cosDigree)
         
         backView.center = oldBackViewCenter;
-        backView.bounds = CGRectMake(0, 0, r1*2, r1*2);
+        backView.bounds = CGRect(x:0, y:0, width:r1*2, height:r1*2);
         backView.layer.cornerRadius = r1;
         
         cutePath = UIBezierPath()
-        cutePath.moveToPoint(pointA)
-        cutePath.addQuadCurveToPoint(pointD, controlPoint: pointO)
-        cutePath.addLineToPoint(pointC)
-        cutePath.addQuadCurveToPoint(pointB, controlPoint: pointP)
-        cutePath.moveToPoint(pointA)
+        cutePath.move(to: pointA)
+        cutePath.addQuadCurve(to: pointD, controlPoint: pointO)
+        cutePath.addLine(to: pointC)
+        cutePath.addQuadCurve(to: pointB, controlPoint: pointP)
+        cutePath.move(to: pointA)
         
-        if backView.hidden == false {
-            shapeLayer.path = cutePath.CGPath
-            shapeLayer.fillColor = fillColorForCute.CGColor
+        if backView.isHidden == false {
+            shapeLayer.path = cutePath.cgPath
+            shapeLayer.fillColor = fillColorForCute.cgColor
             containerView.layer.insertSublayer(shapeLayer, below: frontView.layer)
         }
         
@@ -196,40 +196,40 @@ class CuteView: UIView {
         pathAnimation.calculationMode = kCAAnimationPaced
         
         pathAnimation.fillMode = kCAFillModeForwards
-        pathAnimation.removedOnCompletion = false
+        pathAnimation.isRemovedOnCompletion = false
         pathAnimation.repeatCount = Float.infinity
         pathAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         pathAnimation.duration = 5.0
         
-        let curvedPath = CGPathCreateMutable()
+        let curvedPath = CGMutablePath()
         guard let frontView = frontView else {
             print("frontView is nil!")
             return
         }
-        let circleContainer = CGRectInset(frontView.frame, frontView.bounds.width / 2 - 3, frontView.bounds.size.width / 2 - 3)
-        CGPathAddEllipseInRect(curvedPath, nil, circleContainer)
+        let circleContainer = frontView.frame.insetBy(dx: frontView.bounds.width / 2 - 3, dy: frontView.bounds.size.width / 2 - 3)
+        curvedPath.addEllipse(in: circleContainer)
         
         pathAnimation.path = curvedPath
-        frontView.layer.addAnimation(pathAnimation, forKey: "circleAnimation")
+        frontView.layer.add(pathAnimation, forKey: "circleAnimation")
         
         let scaleX = CAKeyframeAnimation(keyPath: "transform.scale.x")
         scaleX.duration = 1.0
-        scaleX.values = [NSNumber(double: 1.0),NSNumber(double: 1.1),NSNumber(double: 1.0)]
-        scaleX.keyTimes = [NSNumber(double: 0.0), NSNumber(double: 0.5), NSNumber(double: 1.0)]
+        scaleX.values = [NSNumber(value: 1.0),NSNumber(value: 1.1),NSNumber(value: 1.0)]
+        scaleX.keyTimes = [NSNumber(value: 0.0), NSNumber(value: 0.5), NSNumber(value: 1.0)]
         scaleX.repeatCount = Float.infinity
         scaleX.autoreverses = true
         
         scaleX.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        frontView.layer.addAnimation(scaleX, forKey: "scaleXAnimation")
+        frontView.layer.add(scaleX, forKey: "scaleXAnimation")
         
         let scaleY = CAKeyframeAnimation(keyPath: "transform.scale.y")
         scaleY.duration = 1.5
-        scaleY.values = [NSNumber(double: 1.0),NSNumber(double: 1.1),NSNumber(double: 1.0)]
-        scaleY.keyTimes = [NSNumber(double: 0.0), NSNumber(double: 0.5), NSNumber(double: 1.0)]
+        scaleY.values = [NSNumber(value: 1.0),NSNumber(value: 1.1),NSNumber(value: 1.0)]
+        scaleY.keyTimes = [NSNumber(value: 0.0), NSNumber(value: 0.5), NSNumber(value: 1.0)]
         scaleY.repeatCount = Float.infinity
         scaleY.autoreverses = true
         scaleY.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        frontView.layer.addAnimation(scaleY, forKey: "scaleYAnimation")
+        frontView.layer.add(scaleY, forKey: "scaleYAnimation")
         
     }
     

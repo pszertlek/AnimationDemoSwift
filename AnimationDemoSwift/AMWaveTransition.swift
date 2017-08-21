@@ -27,16 +27,16 @@ enum AMWaveInteractiveTransitionType: Int {
 class AMWaveTransition: NSObject {
 
     
-    let kDuration: NSTimeInterval = 0.65
-    let kMaxDelay: NSTimeInterval = 0.15
-    var duration: NSTimeInterval = 0.0
-    var maxDelay: NSTimeInterval = 0.0
-    var operation: UINavigationControllerOperation = .None
+    let kDuration: TimeInterval = 0.65
+    let kMaxDelay: TimeInterval = 0.15
+    var duration: TimeInterval = 0.0
+    var maxDelay: TimeInterval = 0.0
+    var operation: UINavigationControllerOperation = .none
     var transitionType: AMWaveTransitionType = .Nervous
     var viewControllersInset: CGFloat = 20.0
     var animatedAlphaWithInteractiveTransition : Bool = false
     var inteactiveTransitionType: AMWaveInteractiveTransitionType = .EdgePan
-    var screenWidth: CGFloat { return UIScreen.mainScreen().bounds.width}
+    var screenWidth: CGFloat { return UIScreen.main.bounds.width}
     
     deinit {
         self.detachInteractiveGesture()

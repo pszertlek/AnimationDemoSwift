@@ -19,33 +19,34 @@ class TransitionSecondViewController: UIViewController,UINavigationControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         percentTransition = UIPercentDrivenInteractiveTransition()
+//        let edgeGes = UIScreenEdgePanGestureRecognizer(target:self,action:Selector"")
         let edgeGes = UIScreenEdgePanGestureRecognizer(target: self, action: Selector("edgePan:"))
-        edgeGes.edges = .Left
+        edgeGes.edges = .left
         self.view.addGestureRecognizer(edgeGes)
 
         
         let imageView = UIImageView(image: UIImage(named: "IMG_3476"))
         imageView.frame = self.view.bounds
         self.view.addSubview(imageView)
-        button = UIButton(type:.System)
-        button.frame = CGRectMake(0, 0,  100, 100)
+        button = UIButton(type:.system)
+        button.frame = CGRect(x:0, y:0,  width:100, height:100)
         view.addSubview(button)
-        button.backgroundColor = UIColor.clearColor()
-        button.addTarget(self, action: Selector("btnClick"), forControlEvents: .TouchUpInside)
+        button.backgroundColor = UIColor.clear
+        button.addTarget(self, action: #selector(btnClick), for:.touchUpInside)
     }
     
 //    func edgePan(recognizer: UIPanGestureRecognizer) {
 //        let per = recognizer.translationInView(self.view).x /
 //    }
     
-    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return PingInvertTransition()
     }
 //    func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
 //    }
     
-    func btnClick() {
-        self.navigationController?.popViewControllerAnimated(true)
+    @objc func btnClick() {
+        self.navigationController?.popViewController(animated: true)
 //        let vc = TransitionSecondViewController()
 //        
 //        self.navigationController?.pushViewController(vc, animated: true)

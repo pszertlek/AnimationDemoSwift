@@ -15,7 +15,7 @@ class ItemViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let pulseLoader = PulseLoader(frame: CGRectMake(25,25,50,50))
+        let pulseLoader = PulseLoader(frame: CGRect(x:25,y:25,width:50,height:50))
         self.view.addSubview(pulseLoader)
         pulseLoader.startAnimate()
         

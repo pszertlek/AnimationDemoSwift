@@ -15,7 +15,7 @@ class PulseLoader: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        color = UIColor.redColor()
+        color = UIColor.red
         setup()
     }
     
@@ -27,8 +27,8 @@ class PulseLoader: UIView {
     func setup() {
         pulseLayer = CAShapeLayer()
         pulseLayer.frame = self.bounds
-        pulseLayer.path = UIBezierPath(ovalInRect:bounds).CGPath
-        pulseLayer.fillColor = color.CGColor
+        pulseLayer.path = UIBezierPath(ovalIn:bounds).cgPath
+        pulseLayer.fillColor = color.cgColor
         
         let replicatorLayer = CAReplicatorLayer()
         replicatorLayer.instanceCount = 8
@@ -48,13 +48,13 @@ class PulseLoader: UIView {
         groupAnimation.duration = 4.0
         groupAnimation.autoreverses = false
         groupAnimation.repeatCount = HUGE
-        pulseLayer.addAnimation(groupAnimation, forKey: "groupAnimation")
+        pulseLayer.add(groupAnimation, forKey: "groupAnimation")
     }
     
     func alphaAnimation() -> CABasicAnimation {
         let alphaAnimation = CABasicAnimation(keyPath:"opacity")
-        alphaAnimation.fromValue = NSNumber(float: 1)
-        alphaAnimation.toValue = NSNumber(float: 0)
+        alphaAnimation.fromValue = NSNumber(value: 1)
+        alphaAnimation.toValue = NSNumber(value: 0)
         return alphaAnimation
     }
     
@@ -62,8 +62,8 @@ class PulseLoader: UIView {
         let scaleAnimation = CABasicAnimation(keyPath:"transform")
         let t1 = CATransform3DScale(CATransform3DIdentity, 0, 0, 0)
         let t2 = CATransform3DScale(CATransform3DIdentity, 1, 1, 0)
-        scaleAnimation.fromValue = NSValue.init(CATransform3D: t1)
-        scaleAnimation.toValue = NSValue.init(CATransform3D: t2)
+        scaleAnimation.fromValue = NSValue(caTransform3D: t1)
+        scaleAnimation.toValue = NSValue(caTransform3D: t2)
         return scaleAnimation
     }
 }

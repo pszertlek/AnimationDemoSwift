@@ -46,8 +46,10 @@ class PingInvertTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
  func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         ctx.completeTransition(true)
-    let fromVC = ctx.viewControllerForKey(UITransitionContextViewControllerKey.from)! as UIViewControllerUITransitionContextViewControllerKey.from
-    let toVC = ctx.viewControllerForKey(UITransitionContextViewControllerKey.to)! as UIViewControllerUITransitionContextViewControllerKey.to
+    let fromVC = ctx.viewController(forKey: UITransitionContextViewControllerKey.from)! as UIViewController
+//    let fromVC = ctx.viewControllerForKey(UITransitionContextViewControllerKey.from)! as UIViewControllerUITransitionContextViewControllerKey.from
+    let toVC = ctx.viewController(forKey: UITransitionContextViewControllerKey.to)! as UIViewController
+//    let toVC = ctx.viewControllerForKey(UITransitionContextViewControllerKey.to)! as UIViewControllerUITransitionContextViewControllerKey.to
         fromVC.view.layer.mask = nil
         toVC.view.layer.mask = nil
     }

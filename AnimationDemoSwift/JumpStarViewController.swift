@@ -10,13 +10,10 @@ import UIKit
 
 class JumpStarViewController: UIViewController {
     @IBOutlet weak var startView: JumpStarView!
-    @IBAction func buttonClick(sender: AnyObject) {
+    @IBAction func btnClick(_ sender: UIButton) {
         startView.animateSelf()
     }
-    @IBOutlet weak var backClick: UIButton!
-    @IBAction func back(sender: AnyObject) {
-        self.navigationController?.popViewController(animated: true)
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
