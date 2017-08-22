@@ -367,8 +367,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cN3-7y-g0y">
-                                <rect key="frame" x="241" y="534" width="118" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cN3-7y-g0y">
+                                <rect key="frame" x="128.5" y="470" width="118" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ADg-zj-CEC"/>
                                     <constraint firstAttribute="width" constant="114" id="nKf-hC-0n5"/>

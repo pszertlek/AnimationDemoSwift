@@ -12,11 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    
-
-    private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         window?.makeKeyAndVisible()
         window?.backgroundColor = UIColor(red: 128.0/255.0, green: 0.0, blue: 0.0, alpha: 1.0)
         guard let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() else {
@@ -52,19 +48,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIView.animate(withDuration: 0.1, delay: 1.35, options: .curveEaseIn, animations: { () -> Void in
             maskBackgroundView.alpha = 0.0
-            }) { (finished) -> Void in
-                maskBackgroundView.removeFromSuperview()
+        }) { (finished) -> Void in
+            maskBackgroundView.removeFromSuperview()
         }
         
         UIView.animate(withDuration: 0.25, delay: 1.3, options:.transitionCurlUp, animations: { () -> Void in
             navigationController.view.transform = CGAffineTransform(scaleX:1.05,y:1.0);
-            }) { (finished) -> Void in
-                UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: { () -> Void in
-                    navigationController.view.transform = CGAffineTransform()
-                    }, completion: { (finished) -> Void in
-                        navigationController.view.layer.mask = nil
-                        self.window?.backgroundColor = UIColor.white
-                })
+        }) { (finished) -> Void in
+            UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: { () -> Void in
+                navigationController.view.transform = CGAffineTransform.identity
+            }, completion: { (finished) -> Void in
+                navigationController.view.layer.mask = nil
+                self.window?.backgroundColor = UIColor.white
+            })
         }
         
         

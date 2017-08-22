@@ -20,9 +20,9 @@ class TransitionSecondViewController: UIViewController,UINavigationControllerDel
         super.viewDidLoad()
         percentTransition = UIPercentDrivenInteractiveTransition()
 //        let edgeGes = UIScreenEdgePanGestureRecognizer(target:self,action:Selector"")
-        let edgeGes = UIScreenEdgePanGestureRecognizer(target: self, action: Selector("edgePan:"))
-        edgeGes.edges = .left
-        self.view.addGestureRecognizer(edgeGes)
+//        let edgeGes = UIScreenEdgePanGestureRecognizer(target: self, action: Selector("edgePan:"))
+//        edgeGes.edges = .left
+//        self.view.addGestureRecognizer(edgeGes)
 
         
         let imageView = UIImageView(image: UIImage(named: "IMG_3476"))

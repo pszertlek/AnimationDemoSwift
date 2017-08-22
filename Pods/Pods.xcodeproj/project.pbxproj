@@ -16,9 +16,9 @@
 		104B3B11CC4ED60E6AFAB848EBC45E6E /* Pods-AnimationDemoSwift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnimationDemoSwift-frameworks.sh"; sourceTree = "<group>"; };
 		16BFD9A03549B2A29578DE8D9CE894FD /* Pods-AnimationDemoSwift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnimationDemoSwift-acknowledgements.plist"; sourceTree = "<group>"; };
 		179BD1203EAD65B539ACC452841B96D9 /* Pods-AnimationDemoSwift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AnimationDemoSwift-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1DD5936CA5B27DA47DFB6601D067EFC5 /* libPods-AnimationDemoSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AnimationDemoSwift.a"; path = "libPods-AnimationDemoSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DD5936CA5B27DA47DFB6601D067EFC5 /* libPods-AnimationDemoSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimationDemoSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D645AEB498455525FDCD41579A6BDC75 /* Pods-AnimationDemoSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnimationDemoSwift-dummy.m"; sourceTree = "<group>"; };
 		EAD0FCD1177695889C852506741E7EA7 /* Pods-AnimationDemoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimationDemoSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		EEF268E0C0358976D2C33ECC4A919AE5 /* Pods-AnimationDemoSwift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnimationDemoSwift-resources.sh"; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";

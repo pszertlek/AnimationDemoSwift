@@ -27,7 +27,7 @@ class TransitionFirstViewController : UIViewController,UINavigationControllerDel
         button.backgroundColor = UIColor.red
         view.addSubview(button)
         
-        button .addTarget(self, action: Selector("btnClick"), for: .touchUpInside)
+        button .addTarget(self, action: Selector(("btnClick")), for: .touchUpInside)
     }
     
     func btnClick() {
